@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'global.dart';
+import 'colors.dart';
+import 'widgets.dart';
 
 void main() {
   runApp(MyApp());
@@ -13,13 +14,14 @@ class MyApp extends StatelessWidget {
         backgroundColor: Colors.white,
 
         //* BARRA DE TÍTULO
+        //todo Build 'TitleBar' as a widget
         appBar: AppBar(
-          backgroundColor: AppColors.yPink,
+          backgroundColor: AppColors.pink,
           title: Row(
             children: <Widget>[
               Icon(
                 Icons.ac_unit,
-                color: AppColors.yRed,
+                color: AppColors.red,
               ),
               Padding(
                 padding: EdgeInsets.all(10),
@@ -28,7 +30,7 @@ class MyApp extends StatelessWidget {
                 'Maple Companion',
                 style: TextStyle(
                   fontWeight: FontWeight.bold,
-                  color: AppColors.yDarkRed,
+                  color: AppColors.bordeaux,
                 ),
               ),
             ],
@@ -36,55 +38,33 @@ class MyApp extends StatelessWidget {
         ),
 
         //* MENU HAMBURGUER
+        //todo Build 'HamburguerMenu' as a widget
         endDrawer: Drawer(
           child: Container(
-            color: AppColors.yPink,
+            color: AppColors.pink,
             child: ListView(
               children: <Widget>[
-                //*TÍTULO DO MENU
-                Container(
-                  color: AppColors.yRed,
-                  padding: EdgeInsets.all(16),
-                  child: Row(
-                    children: <Widget>[
-                      Icon(
-                        Icons.pets,
-                        color: AppColors.yPink,
-                      ),
-                      Padding(
-                        padding: EdgeInsets.all(10),
-                      ),
-                      Text(
-                        'Menu',
-                        style: TextStyle(
-                          fontWeight: FontWeight.bold,
-                          color: AppColors.yPink,
-                        ),
-                      ),
-                    ],
-                  ),
+                //* BOTÕES DO MENU
+                TileButton(
+                  onPressed: null,
+                  icon: Icons.pets,
+                  text: 'Menu',
+                  textColor: AppColors.pink,
+                  backgroundColor: AppColors.red,
                 ),
-                //*BOTÕES DE AÇÃO
-                Container(
-                  padding: EdgeInsets.all(16),
-                  child: Row(
-                    children: <Widget>[
-                      Icon(
-                        Icons.account_circle,
-                        color: AppColors.yDarkRed,
-                      ),
-                      Padding(
-                        padding: EdgeInsets.all(10),
-                      ),
-                      Text(
-                        'Profile',
-                        style: TextStyle(
-                          fontWeight: FontWeight.bold,
-                          color: AppColors.yDarkRed,
-                        ),
-                      ),
-                    ],
-                  ),
+                TileButton(
+                  onPressed: null,
+                  icon: Icons.account_circle,
+                  text: 'Profile',
+                  textColor: AppColors.bordeaux,
+                  backgroundColor: AppColors.pink,
+                ),
+                TileButton(
+                  onPressed: null,
+                  icon: Icons.class_,
+                  text: 'Draws',
+                  textColor: AppColors.bordeaux,
+                  backgroundColor: AppColors.pink,
                 ),
               ],
             ),
