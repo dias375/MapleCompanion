@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'global.dart';
 
 void main() {
   runApp(MyApp());
@@ -13,12 +14,12 @@ class MyApp extends StatelessWidget {
 
         //* BARRA DE TÍTULO
         appBar: AppBar(
-          backgroundColor: Color.fromRGBO(250, 188, 188, 1),
+          backgroundColor: AppColors.yPink,
           title: Row(
             children: <Widget>[
               Icon(
                 Icons.ac_unit,
-                color: Color.fromRGBO(221, 46, 68, 1),
+                color: AppColors.yRed,
               ),
               Padding(
                 padding: EdgeInsets.all(10),
@@ -27,7 +28,7 @@ class MyApp extends StatelessWidget {
                 'Maple Companion',
                 style: TextStyle(
                   fontWeight: FontWeight.bold,
-                  color: Color.fromRGBO(125, 14, 14, 1),
+                  color: AppColors.yDarkRed,
                 ),
               ),
             ],
@@ -37,18 +38,18 @@ class MyApp extends StatelessWidget {
         //* MENU HAMBURGUER
         endDrawer: Drawer(
           child: Container(
-            color: Color.fromRGBO(250, 188, 188, 1),
+            color: AppColors.yPink,
             child: ListView(
               children: <Widget>[
                 //*TÍTULO DO MENU
                 Container(
-                  color: Color.fromRGBO(221, 46, 68, 1),
+                  color: AppColors.yRed,
                   padding: EdgeInsets.all(16),
                   child: Row(
                     children: <Widget>[
                       Icon(
                         Icons.pets,
-                        color: Color.fromRGBO(250, 188, 188, 1),
+                        color: AppColors.yPink,
                       ),
                       Padding(
                         padding: EdgeInsets.all(10),
@@ -57,7 +58,7 @@ class MyApp extends StatelessWidget {
                         'Menu',
                         style: TextStyle(
                           fontWeight: FontWeight.bold,
-                          color: Color.fromRGBO(250, 188, 188, 1),
+                          color: AppColors.yPink,
                         ),
                       ),
                     ],
@@ -65,13 +66,12 @@ class MyApp extends StatelessWidget {
                 ),
                 //*BOTÕES DE AÇÃO
                 Container(
-                  //color: Color.fromRGBO(221, 46, 68, 1),
                   padding: EdgeInsets.all(16),
                   child: Row(
                     children: <Widget>[
                       Icon(
                         Icons.account_circle,
-                        color: Color.fromRGBO(125, 14, 14, 1),
+                        color: AppColors.yDarkRed,
                       ),
                       Padding(
                         padding: EdgeInsets.all(10),
@@ -80,7 +80,7 @@ class MyApp extends StatelessWidget {
                         'Profile',
                         style: TextStyle(
                           fontWeight: FontWeight.bold,
-                          color: Color.fromRGBO(125, 14, 14, 1),
+                          color: AppColors.yDarkRed,
                         ),
                       ),
                     ],
