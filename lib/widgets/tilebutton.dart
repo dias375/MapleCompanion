@@ -1,44 +1,37 @@
 import 'package:flutter/material.dart';
-import 'colors.dart';
+import '../variables/colors.dart';
 
-//! TILE BUTTON
-//todo create 'Title' option for button
 class TileButton extends StatelessWidget {
   TileButton(
-      {this.onPressed,
-      this.text,
-      this.icon,
-      this.backgroundColor,
-      this.textColor});
+      {this.onPressed, @required this.text, @required this.icon, this.isTitle});
 
   final GestureTapCallback onPressed;
   final String text;
   final IconData icon;
-  final Color backgroundColor;
-  final Color textColor;
+  final int isTitle;
 
   @override
   Widget build(BuildContext context) {
     return FlatButton(
-      onPressed: () {},
-      color: backgroundColor,
+      onPressed: onPressed,
+      color: isTitle == null ? AppColors.pink : AppColors.red,
       splashColor: AppColors.bordeaux,
       child: Container(
-        padding: EdgeInsetsDirectional.only(top: 16, bottom: 16),
+        padding: EdgeInsets.symmetric(vertical: 16),
         child: Row(
           children: <Widget>[
             Icon(
               icon,
-              color: textColor,
+              color: isTitle == null ? AppColors.bordeaux : AppColors.pink,
             ),
             Padding(
-              padding: EdgeInsets.all(10),
+              padding: EdgeInsets.symmetric(horizontal: 10),
             ),
             Text(
               '$text',
               style: TextStyle(
                 fontWeight: FontWeight.bold,
-                color: textColor,
+                color: isTitle == null ? AppColors.bordeaux : AppColors.pink,
               ),
             ),
           ],
@@ -47,4 +40,3 @@ class TileButton extends StatelessWidget {
     );
   }
 }
-//! <end> TILE BUTTON

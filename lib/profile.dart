@@ -1,10 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:maple_companion/widgets/titlebar.dart';
 import 'widgets/sidemenu.dart';
-
-void main() {
-  runApp(MyApp());
-}
+import 'widgets/titlebar.dart';
 
 class MyApp extends StatelessWidget {
   @override
@@ -14,8 +11,9 @@ class MyApp extends StatelessWidget {
         backgroundColor: Colors.white,
 
         //* BARRA DE TÍTULO
+        //todo Build 'TitleBar' as a widget
         appBar: TitleBar(
-          text: 'Draws',
+          text: 'Profile',
         ),
 
         //* MENU HAMBURGUER
