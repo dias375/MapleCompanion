@@ -19,7 +19,7 @@ class SideMenu extends StatelessWidget {
               onPressed: () {
                 Navigator.push(
                   context,
-                  new CupertinoPageRoute(
+                  CupertinoPageRoute(
                     builder: (context) => MyApp(),
                   ),
                 );
@@ -32,7 +32,7 @@ class SideMenu extends StatelessWidget {
               onPressed: () {
                 Navigator.push(
                   context,
-                  new CupertinoPageRoute(
+                  CupertinoPageRoute(
                     builder: (context) => Profile(),
                   ),
                 );
@@ -44,7 +44,7 @@ class SideMenu extends StatelessWidget {
               onPressed: () {
                 Navigator.push(
                   context,
-                  new CupertinoPageRoute(
+                  CupertinoPageRoute(
                     builder: (context) => Draws(),
                   ),
                 );

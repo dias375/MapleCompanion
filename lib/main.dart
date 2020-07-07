@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:maple_companion/variables/colors.dart';
 import 'package:maple_companion/widgets/titlebar.dart';
+import 'package:maple_companion/widgets/inputnumber.dart';
 import 'menu.dart';
 
 void main() {
@@ -19,6 +20,12 @@ class MyApp extends StatelessWidget {
         appBar: TitleBar(
             //colorTheme: 1,
             ),
+
+        //!TEST AREA
+        body: Center(
+          child: NumberInput(),
+        ),
+        //! <END> TEST AREA
 
         //* MENU HAMBURGUER
         endDrawer: SideMenu(),
