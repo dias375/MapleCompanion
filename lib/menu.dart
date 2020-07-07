@@ -1,4 +1,8 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:maple_companion/draws.dart';
+import 'package:maple_companion/main.dart';
+import 'package:maple_companion/profile.dart';
 import 'variables/colors.dart';
 import 'widgets/tilebutton.dart';
 
@@ -12,18 +16,39 @@ class SideMenu extends StatelessWidget {
             //* BOTÕES DO MENU
 
             TileButton(
-              onPressed: () {},
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  new CupertinoPageRoute(
+                    builder: (context) => MyApp(),
+                  ),
+                );
+              },
               icon: Icons.pets,
               text: 'Menu',
               colorTheme: 1,
             ),
             TileButton(
-              onPressed: () {},
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  new CupertinoPageRoute(
+                    builder: (context) => Profile(),
+                  ),
+                );
+              },
               icon: Icons.portrait,
               text: 'Profile',
             ),
             TileButton(
-              onPressed: () {},
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  new CupertinoPageRoute(
+                    builder: (context) => Draws(),
+                  ),
+                );
+              },
               icon: Icons.format_list_numbered,
               text: 'Draws',
             ),
