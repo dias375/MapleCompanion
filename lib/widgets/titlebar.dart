@@ -2,19 +2,24 @@ import 'package:flutter/material.dart';
 import '../variables/colors.dart';
 
 class TitleBar extends StatelessWidget with PreferredSizeWidget {
-  TitleBar({this.text});
+  TitleBar({this.text, this.colorTheme});
 
   final String text;
+  final int colorTheme;
+
+  //! Color Theme
+  //? Default: Pink background & Bordeaux Letters
+  //?    1   : Red background & Pink Letters
 
   @override
   Widget build(BuildContext context) {
     return AppBar(
-      backgroundColor: AppColors.pink,
+      backgroundColor: colorTheme == 1 ? AppColors.red : AppColors.pink,
       title: Row(
         children: <Widget>[
           Icon(
             Icons.ac_unit,
-            color: AppColors.red,
+            color: colorTheme == 1 ? AppColors.bordeaux : AppColors.red,
           ),
           Padding(
             padding: EdgeInsets.all(10),
@@ -23,7 +28,7 @@ class TitleBar extends StatelessWidget with PreferredSizeWidget {
             text != null ? text : 'Maple Companion',
             style: TextStyle(
               fontWeight: FontWeight.bold,
-              color: AppColors.bordeaux,
+              color: colorTheme == 1 ? AppColors.pink : AppColors.bordeaux,
             ),
           ),
         ],

@@ -1,23 +1,19 @@
 import 'package:flutter/material.dart';
-import 'package:maple_companion/variables/colors.dart';
-import 'package:maple_companion/widgets/titlebar.dart';
 import 'menu.dart';
+import 'widgets/titlebar.dart';
 
-void main() {
-  runApp(MyApp());
-}
-
-class MyApp extends StatelessWidget {
+class Draws extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
-        backgroundColor: AppColors.red,
+        backgroundColor: Colors.white,
 
         //* BARRA DE TÍTULO
+        //todo Build 'TitleBar' as a widget
         appBar: TitleBar(
-            //colorTheme: 1,
-            ),
+          text: 'Draws',
+        ),
 
         //* MENU HAMBURGUER
         endDrawer: SideMenu(),

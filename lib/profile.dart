@@ -1,9 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:maple_companion/widgets/titlebar.dart';
-import 'widgets/sidemenu.dart';
+import 'menu.dart';
 import 'widgets/titlebar.dart';
 
-class MyApp extends StatelessWidget {
+class Profile extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import '../variables/colors.dart';
-import 'tilebutton.dart';
+import 'variables/colors.dart';
+import 'widgets/tilebutton.dart';
 
 class SideMenu extends StatelessWidget {
   Widget build(BuildContext context) {
@@ -15,7 +15,7 @@ class SideMenu extends StatelessWidget {
               onPressed: () {},
               icon: Icons.pets,
               text: 'Menu',
-              isTitle: 1,
+              colorTheme: 1,
             ),
             TileButton(
               onPressed: () {},

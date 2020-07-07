@@ -3,18 +3,25 @@ import '../variables/colors.dart';
 
 class TileButton extends StatelessWidget {
   TileButton(
-      {this.onPressed, @required this.text, @required this.icon, this.isTitle});
+      {this.onPressed,
+      @required this.text,
+      @required this.icon,
+      this.colorTheme});
 
   final GestureTapCallback onPressed;
   final String text;
   final IconData icon;
-  final int isTitle;
+  final int colorTheme;
+
+  //! Color Theme
+  //? Default: Pink background & Bourdeaux background
+  //?    1   : Red background & Pink Letters
 
   @override
   Widget build(BuildContext context) {
     return FlatButton(
       onPressed: onPressed,
-      color: isTitle == null ? AppColors.pink : AppColors.red,
+      color: colorTheme == 1 ? AppColors.red : AppColors.pink,
       splashColor: AppColors.bordeaux,
       child: Container(
         padding: EdgeInsets.symmetric(vertical: 16),
@@ -22,7 +29,7 @@ class TileButton extends StatelessWidget {
           children: <Widget>[
             Icon(
               icon,
-              color: isTitle == null ? AppColors.bordeaux : AppColors.pink,
+              color: colorTheme == 1 ? AppColors.pink : AppColors.bordeaux,
             ),
             Padding(
               padding: EdgeInsets.symmetric(horizontal: 10),
@@ -31,7 +38,7 @@ class TileButton extends StatelessWidget {
               '$text',
               style: TextStyle(
                 fontWeight: FontWeight.bold,
-                color: isTitle == null ? AppColors.bordeaux : AppColors.pink,
+                color: colorTheme == 1 ? AppColors.pink : AppColors.bordeaux,
               ),
             ),
           ],

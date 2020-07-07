@@ -6,3 +6,4 @@ class AppColors {
   static final red = Color.fromRGBO(221, 46, 68, 1);
   static final bordeaux = Color.fromRGBO(125, 14, 14, 1);
 }
+//todo Create refereces for 'default' and 'dark theme'
